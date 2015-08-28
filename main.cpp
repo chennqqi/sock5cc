@@ -450,7 +450,7 @@ int main(int argc, char *argv[])
             if (!client.Verify(nIP, 1080, 3000))
             {
                 UINT64 tEndNs = GetTickNs();
-                printf("failed connect, cost %llu nanoseconds\n", tEndNs-tStartNs);
+                printf("%s failed connect, cost %llu nanoseconds\n", line.c_str(), tEndNs-tStartNs);
             }
             else
             {
